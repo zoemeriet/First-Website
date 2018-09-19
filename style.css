@@ -1,0 +1,328 @@
+/*------------------------------*/
+/*------------ FONT ------------*/
+/*------------------------------*/
+@font-face {
+	font-family: "bringshoot";
+	src: url('font/Bringshoot.otf');
+}
+@font-face {
+	font-family: "roboto";
+	src: url('font/roboto/Roboto-Light.ttf');
+}
+@font-face {
+	font-family: "roboto";
+    font-weight: bold;
+	src: url('font/roboto/Roboto-Regular.ttf');
+}
+
+/*-----------------------------*/
+/*------------ CSS ------------*/
+/*-----------------------------*/
+body {
+    margin: 0;
+    font-family: "roboto";
+}
+h1, p {
+    display: inline-block;
+}
+h2 {
+    font-family: "bringshoot", "roboto", sans-serif;
+    font-weight: normal;
+    font-size: 3rem;
+    color: #232931;
+    
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*---- HEADER ----*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    background-image: url(img/background_header.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+header>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 385px;
+}
+header .line {
+    width: 100px;
+    height: 3px;
+    background-color: white;
+}
+header p {
+    font-family: sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+header h1 {
+    font-family: "bringshoot", sans-serif;
+    font-size: 6rem;
+    font-weight: normal;
+    color: white;
+    
+    padding: 2rem;
+    margin: 0;
+    
+    border: 5px solid white;
+    box-shadow: 2px 2px 2px #424242;
+    text-shadow: 2px 2px 2px #424242;
+}
+header img {
+    position: absolute;
+    bottom: 5px;
+    left: 48%;
+    width: 70px;
+}
+
+
+/*---- NAV ----*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-sizing: border-box;
+}
+nav h1 {
+    font-family: "bringshoot", sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: white;
+    margin: 0.5rem;
+} 
+nav ul {
+    display: flex; 
+    text-transform: uppercase;
+}
+nav ul a {
+    padding: 0.3rem;
+    margin: 0.5rem;
+}
+body.scrolled .navbar {
+    /* Après scroll */
+    background: #232931;
+    transition: background 0.5s ease ;
+}
+body.scrolled .navbar:hover {
+  /* Avant scroll */
+}
+
+/*------------------*/
+/*---- ABOUT US ----*/
+/*------------------*/
+.about article {
+    display: flex;
+    align-items: center;
+}
+.about div {
+    padding: 1rem 4rem 1rem 4rem;
+}
+.about img {
+    width: 50vw;
+}
+
+
+/*--------------*/
+/*---- MENU ----*/
+/*--------------*/
+.menu {
+    margin-top: 4rem;
+}
+.menu h2 {
+    text-align: center;
+}
+.menu h2, .menu p {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+.menus {
+    display: flex;
+    justify-content: center;
+    
+    height: 51vw;
+    margin-top: 3rem;
+    
+    background-image: url(img/background_menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.menus article {
+    display: flex;
+    flex-direction: column;
+    
+    width: 300px;
+    height: 400px;
+    background-color: #232931;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+}
+.menus article:nth-of-type(2){
+    flex-direction: column-reverse;
+}
+.menus article img {
+    width: 100%;
+}
+.menus article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 200px;
+}
+.menus article div span {
+    font-weight: bold;
+}
+.menus article div p {
+    font-size: 1.5rem;
+}
+
+
+/*-----------------*/
+/*---- CONTACT ----*/
+/*-----------------*/
+.contact {
+    margin-top: 4rem;
+}
+.contact h2 {
+    text-align: center;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    
+    width: 45%;
+    margin: auto;
+}
+.contact input, .contact textarea {
+    outline: none;
+    margin: 1rem;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+input[type=text] {
+    border: none;
+}
+.sent {
+    align-self: flex-end;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/*----------------*/
+/*---- FOOTER ----*/
+/*----------------*/
+footer {
+    background-color: #232931;
+    color: grey;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+.anchor{
+  display: block;
+  height: 50px; /*same height as header*/
+  margin-top: -50px; /*same height as header*/
+  visibility: hidden;
+}
+
+
+@media screen and (max-width: 900px) {
+    header img {
+        left: 45%;
+    }
+    .about article:nth-of-type(1) {
+        flex-direction: column;
+    }
+    .about article:nth-of-type(2) {
+        flex-direction: column-reverse;
+    }
+    .about img {
+        width: 500px;
+    }
+    .menus {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+    .menus article {
+        margin: 1rem;
+    }
+    .menus article:nth-of-type(2) {
+        flex-direction: column;
+    }
+    .contact form {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .anchor {
+        height: 90px; /*same height as header*/
+        margin-top: -90px; /*same height as header*/
+    }
+    header img {
+        left: 40%;
+    }
+    header>div {
+        width: 305px;
+    }
+    header .line {
+        width: 70px;
+    }
+    header h1 {
+        font-size: 4.5rem;
+    }
+    nav {
+        flex-direction: column;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+    .about div {
+        padding: 1rem;
+    }
+    .about img {
+        width: 100%;
+    }
+    .menu h2, .menu p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .contact form {
+        width: 90%;
+    }
+}
